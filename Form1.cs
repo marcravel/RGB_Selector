@@ -90,5 +90,19 @@ namespace WindowsFormsApp1
                 }
             }
         }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var closingWindow = new ClosignForm();
+            DialogResult result = closingWindow.ShowDialog();  
+            if (result == DialogResult.Cancel || result == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                e.Cancel = false;
+            }
+        }
     }
 }

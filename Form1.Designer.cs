@@ -99,6 +99,7 @@
             // 
             // output
             // 
+            this.output.BackColor = System.Drawing.Color.Black;
             this.output.HideSelection = false;
             this.output.Location = new System.Drawing.Point(307, 35);
             this.output.Name = "output";
@@ -147,7 +148,9 @@
             this.Controls.Add(this.trackGreen);
             this.Controls.Add(this.trackRed);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.trackRed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackGreen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBlue)).EndInit();
